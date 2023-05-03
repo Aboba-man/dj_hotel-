@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+	
+
+	<link rel="stylesheet" href={% static 'fonts/outfit-regular.woff2' %}/>
+	<link rel="stylesheet" href={% static 'fonts/releway-regular.woff2' %}/>
+	
+				
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="content">
+
+			
+			<a class="nav-item nav-link" href="{% url 'register' %}">Регистрация</a>
+			<a class="nav-item nav-link" href="{% url 'login' %}">Вход</a>
+			<a class="nav-item nav-link" href="{% url 'logout' %}">Выход</a>
+			<h1>Hello, {{ user.username|default:'Guest' }}</h1>
+
+			<!-- <a class="nav-item nav-link" href="{% url 'roms' %}">комнаты</a><br> -->
+			
+			<header class="hero-section">
+				
+				<img data-speed=".6" class="hero" src={% static "img/hero.png" %} alt="Alt" >
+				
+				<div class="container">
+					<div data-speed=".75" class="main-header">
+						<h1 class="main-title">creative scroll</h1>
+					</div>
+				</div>
+			</header>
+		
+			<div class="portfolio">
+				<div class="container">
+					<main class="gallery">
+	
+						<div data-speed=".9" class="gallery__left">
+		
+							
+							
+							<img class="gallery__item" src={% static "img/work/1.jpg" %} alt="Alt">
+							<img class="gallery__item" src={% static "img/work/2.jpg" %} alt="Alt">
+
+
+
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Creative floating scroll with amazing parallax effect</h2>
+								<p class="text-block__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrolling.</p>
+							</div>
+		
+							
+							<img class="gallery__item" src={% static "img/work/6.jpg" %} alt="Alt">
+		
+						</div>
+
+						<div data-speed="1.1" class="gallery__right">
+		
+							<div class="text-block gallery__item">
+								<h2 class="text-block__h">Creative floating scroll with amazing parallax effect</h2>
+								<p class="text-block__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrolling.</p>
+							</div>
+		
+							
+
+							<img class="gallery__item" src={% static "img/work/4.jpg" %} alt="Alt">
+							<img class="gallery__item" src={% static "img/work/5.jpg" %} alt="Alt">
+							<img class="gallery__item" src={% static "img/work/3.jpg" %} alt="Alt">
+							
+						</div>
+
+					</main>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="{% static 'js/app.js' %}" defer></script>
+
+	
+	
+	<script type="text/javascript" src="{% static 'js/libs/gsap/gsap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/libs/gsap/ScrollTrigger.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/libs/gsap/ScrollSmoother.min.js' %}"></script>
+	
+</body>
+</html>

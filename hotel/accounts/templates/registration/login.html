@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div class="content-section" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	
+    <form method="POST">
+      {% csrf_token %}
+      <fieldset class="form-group">
+          <legend class="border-bottom mb-4">Вход</legend>
+         
+         <div class="four">
+          
+          <!-- {{form|crispy}} -->
+          <!-- {{form.as_p}} -->
+          Введите имя или имэил
+          {{form.username}}
+          Введите пароль
+          {{form.password}}
+         </div>
+
+         
+      </fieldset>
+      <div class="form-group">
+          <button class="btn btn-dark" type="submit">Войти</button>
+      </div>
+  </form>
+
+
+  
+  </div>
+{% endblock %}

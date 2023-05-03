@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <style>
+     body {
+      color: pink;
+      text-align: center;
+      } 
+ 
+    </style>
+  </head>
+  <body>
+    <h1>Hello, {{ user.username|default:'Guest' }}</h1>
+    <a class="nav-item nav-link" href="{% url 'register' %}">Регистрация</a>
+    <a class="nav-item nav-link" href="{% url 'login' %}">Вход</a>
+    <a class="nav-item nav-link" href="{% url 'logout' %}">Выход</a>
+    <p> Welcome to the Our site</p>
+    
+  </body>
+</html>
